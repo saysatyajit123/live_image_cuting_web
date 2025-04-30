@@ -128,3 +128,8 @@ downloadButton.addEventListener('click', () => {
   // Trigger the download
   downloadLink.click();
 });
+
+// input clear function
+function clear() {
+  customFileNameInput.innerText = "";
+}

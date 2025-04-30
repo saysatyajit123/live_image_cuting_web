@@ -130,6 +130,6 @@ downloadButton.addEventListener('click', () => {
 });
 
 // input clear function
-function clear() {
-  customFileNameInput.innerText = "";
+function clearInput() {
+  customFileNameInput.value = '';
 }

@@ -131,5 +131,7 @@ downloadButton.addEventListener('click', () => {
 
 // input clear function
 function clearInput() {
-  customFileNameInput.value = '';
+  setTimeout(() => {
+    customFileNameInput.value = '';
+  }, 2000); 
 }

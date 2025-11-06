@@ -37,7 +37,8 @@ video.addEventListener('play', () => {
   setInterval(async () => {
     const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
     const resized = faceapi.resizeResults(detections, displaySize);
-    const ctx = overlay.getContext('2d');
+    // const ctx = overlay.getContext('2d');
+    const ctx = overlay.getContext('2d', { willReadFrequently: true });
     ctx.clearRect(0, 0, overlay.width, overlay.height);
     faceapi.draw.drawDetections(overlay, resized);
   }, 200);
@@ -186,4 +187,5 @@ function showToast({ text = '', duration = 3000, type = '' } = {}) {
         }, 260);
     }
 }
+
 

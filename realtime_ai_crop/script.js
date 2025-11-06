@@ -9,10 +9,10 @@ const imgTitleInput = document.getElementById('imgTitle');
 let stream;
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('models/'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('models/'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('models/'),
-  faceapi.nets.faceExpressionNet.loadFromUri('models/')
+  faceapi.nets.tinyFaceDetector.loadFromUri('realtime_ai_crop/models/'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('realtime_ai_crop/models/'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('realtime_ai_crop/models/'),
+  faceapi.nets.faceExpressionNet.loadFromUri('realtime_ai_crop/models/')
 ]).then(() => {
   console.log("Models Loaded");
 });
@@ -186,3 +186,4 @@ function showToast({ text = '', duration = 3000, type = '' } = {}) {
         }, 260);
     }
 }
+
